@@ -4,5 +4,6 @@ npm i -g @angular/cli
 npm i -g cordova
 npm i -g cordova-res
 
+firebase init
 
 ionic serve --ssl

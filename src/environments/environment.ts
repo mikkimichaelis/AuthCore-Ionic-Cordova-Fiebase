@@ -3,7 +3,21 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  firebaseConfig: {
+    apiKey: "AIzaSyBl1MVP3bafzCnWG8RBZNmjLhyveracvsA",
+    authDomain: "authcoreioniccordovafirebase.firebaseapp.com",
+    projectId: "authcoreioniccordovafirebase",
+    storageBucket: "authcoreioniccordovafirebase.appspot.com",
+    messagingSenderId: "80323442868",
+    appId: "1:80323442868:web:53c7115c16873ff91f7fe1",
+    databaseURL: "https://anonymousmeetings.firebaseio.com",
+    useEmulators: false
+  },
+  networkRetryCount: 10,
+  networkRetryDelay: 500,
+  busyTimeoutDuration: 10000,
+  toastTimeoutDuration: 2000
 };
 
 /*

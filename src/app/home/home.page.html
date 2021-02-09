@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Welcome {{(authService.authUser$ | async)?.displayName}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,9 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-button routerLink="/login" *ngIf="!authService.isAuthenticated">Login</ion-button>
+  <ion-button routerLink="/login" [queryParams]="{signOut: true}" *ngIf="authService.isAuthenticated">Sign Out</ion-button>
 
   <div id="container">
     <strong>Ready to create an app?</strong>
