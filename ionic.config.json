@@ -1,5 +1,7 @@
 {
   "name": "AuthCore-Ionic-Cordova-Firebase",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
