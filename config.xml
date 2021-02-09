@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="app.authcore" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <universal-links>
-        <!-- <host name="DYNAMIC_LINK_DOMAIN" scheme="https" /> -->
         <host name="authcoreioniccordovafirebase.firebaseapp.com" scheme="https">
-            <path url="/__/auth/callback"/>
+            <path url="/__/auth/callback" />
         </host>
     </universal-links>
     <name>AutthCore</name>
-    <description></description>
+    <description />
     <author email="mikkimichaelis@gmail.com" href="http://psychwardsoftware.com">Psych Ward Software Inc.</author>
     <content src="index.html" />
     <access origin="*" />
