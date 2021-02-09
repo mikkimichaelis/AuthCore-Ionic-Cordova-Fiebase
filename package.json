@@ -27,6 +27,7 @@
     "@ionic/storage": "^2.3.1",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "cordova-ios": "6.2.0",
     "firebase": "^8.2.6",
     "firebaseui": "^4.7.3",
     "luxon": "^1.25.0",
@@ -95,6 +96,7 @@
       }
     },
     "platforms": [
+      "ios",
       "android"
     ]
   }

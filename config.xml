@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="app.authcore" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="app.authcore.ios" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <universal-links>
+        <host name="authcore.web.app" scheme="https" />
         <host name="authcoreioniccordovafirebase.firebaseapp.com" scheme="https">
             <path url="/__/auth/callback" />
         </host>
@@ -16,6 +17,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="http://*" />
+    <allow-navigation href="https://*" />
+    <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
+    <preference name="AppendUserAgent" value="ipad" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
