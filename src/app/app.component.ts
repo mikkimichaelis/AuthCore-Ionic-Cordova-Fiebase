@@ -35,7 +35,7 @@ export class AppComponent {
 
       this.authService.authUser$.subscribe(
         (authUser) => {
-          this.handleAuthChange(authUser)
+          this.handleAuthChangeCoreRouting(authUser)
         });
 
       if (this.platform.is('hybrid')) {
@@ -47,7 +47,7 @@ export class AppComponent {
     });
   }
 
-  async handleAuthChange(authUser: firebase.User) {
+  async handleAuthChangeCoreRouting(authUser: firebase.User) {
     if (!_.isEmpty(authUser) && !_.isEmpty(this.userService._user)) {
       console.log(`(authUser && _user) -> navigateRoot('/home')`);
       this.navController.navigateRoot('/home');
@@ -60,13 +60,13 @@ export class AppComponent {
         await this.navController.navigateRoot('/home');
       } else {
         this.toastService.present(`Network Error`);
-        // console.log(`!user -> navigateRoot('/core/login')`);
-        // this.navController.navigateRoot('/core/login');
+        console.log(`!user -> navigateRoot('/login')`);
+        this.navController.navigateRoot('/login?signOut=true');
       }
     }
-    // else {
-    //   console.log(`navigateRoot('/core/login')`);
-    //   this.navController.navigateRoot('/core/login');
-    // }
+    else {
+      console.log(`!authUser -> navigateRoot('/login')`);
+      this.navController.navigateRoot('/login');
+    }
   }
 }
